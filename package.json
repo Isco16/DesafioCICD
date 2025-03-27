@@ -4,11 +4,32 @@
   "description": "A basic Node.js API to manage tasks",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "echo 'No hay proceso de compilación en este proyecto'",
+    "test": "jest --coverage --forceExit",
+    "lint": "eslint ."
   },
   "dependencies": {
     "express": "^4.18.2"
   },
-  "author": "",
+  "devDependencies": {
+    "eslint": "^9.23.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ci",
+    "cd",
+    "jenkins",
+    "nodejs",
+    "express"
+  ],
+  "author": "IscoDev16",
   "license": "ISC"
 }
