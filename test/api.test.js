@@ -2,18 +2,18 @@ const request = require('supertest');
 const express = require('express');
 const app = require('../app.js'); // Asegúrate de que la ruta sea correcta
 describe('API Tests', () => {
-    it('GET /tasks - Obtener tareas', async () => {
-        const res = await request(app).get('/tasks');
-        expect(res.status).toBe(200);
-        expect(res.body).toHaveProperty('tasks');
-    });
-    // it('GET /tasks/:id - Obtener una tarea', async () => {
-    //     task = { id: 1, name: 'Task 1' };
-    //     const taskId = 1; // Cambia esto según el ID de la tarea que quieras probar
-    //     const res = await request(app).get(`/tasks/${taskId}`);
+    // it('GET /tasks - Obtener tareas', async () => {
+    //     const res = await request(app).get('/tasks');
     //     expect(res.status).toBe(200);
-    //     expect(res.body).toStrictEqual(task);
+    //     expect(res.body).toHaveProperty('tasks');
     // });
+    it('GET /tasks/:id - Obtener una tarea', async () => {
+        task = { id: 1, name: 'Task 1' };
+        const taskId = 1; // Cambia esto según el ID de la tarea que quieras probar
+        const res = await request(app).get(`/tasks/${taskId}`);
+        expect(res.status).toBe(200);
+        expect(res.body).toStrictEqual(task);
+    });
     // it('POST /tasks - Agregar un elemento', async () => {
     //     const res = await request(app).post('/tasks').send({ item: 'Nuevo Item' });
     //     expect(res.status).toBe(201);
