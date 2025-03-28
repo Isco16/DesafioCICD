@@ -1,6 +1,6 @@
 const request = require('supertest');
 const express = require('express');
-const app = require('../server');
+const app = require('../app.js'); // Asegúrate de que la ruta sea correcta
 describe('API Tests', () => {
     it('GET /tasks - Obtener tareas', async () => {
         const res = await request(app).get('/tasks');
