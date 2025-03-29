@@ -35,11 +35,13 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
+        stage('Docker Build & Run') {
             steps {
                 script {
                     try {
                         echo '🚀 Desplegando aplicación...'
+                        bat 'docker build -t desafio08grupo02 .' // Construye la imagen Docker
+                        bat 'docker run -d -p 3000:3000 desafio08grupo02' // Ejecuta el contenedor Docker
                         bat 'npm start &'
                     } catch(Exception e) 
                     {
