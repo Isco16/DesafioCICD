@@ -86,4 +86,4 @@ Se verifica en Docker Desktop que el contenedor ‘desafio08’ basado en la ima
 
 - Evidencia de la ejecucion exitosas del pipeline.
 
-![Captura pipeline](assets/reports/DESAFIO08GRUPO2%20RESULTADO%20#4%20Console%20-%20Jenkins.pdf)
+![Captura pipeline](<assets/reports/Reporte pipeline.pdf>)
