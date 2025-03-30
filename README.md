@@ -2,6 +2,15 @@
 
 Este proyecto demuestra una sencilla API Node.js para la gestión de tareas, integrada con Docker para la contenerización y Jenkins para el pipeline CI/CD.
 
+## Integrantes
+
+- Francisco Jara
+- Fernando Poblete
+- Francisco Vargas
+- Jorge Riquelme
+- Neil Aular
+- Diego Jimenez
+
 ## Características
 
 - Listar todas las tareas  
