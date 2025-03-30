@@ -9,7 +9,7 @@ describe('API Tests', () => {
         expect(res.status).toBe(200);
         expect(res.body).toStrictEqual(task);
     });
-    it('GET /tasks - Obtener elementos', async () => {
+    it('GET /tasks - Obtener todas las tareas', async () => {
         let tasks = [
             { id: 1, name: 'Task 1' },
             { id: 2, name: 'Task 2' }
