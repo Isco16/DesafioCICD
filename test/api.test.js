@@ -4,8 +4,9 @@ const app = require('../app.js'); // Asegúrate de que la ruta sea correcta
 describe('API Tests', () => {
     afterAll(async () => {
         // Example: Close database connections or stop the server if applicable
-        if (app.close) {
-            await app.close(); // Close the app if it has a close method
+        // if (app.close) {
+        //     await app.close(); // Close the app if it has a close method
+        await app.close(); // Close the app if it has a close method
         }
     });
     afterEach(() => {
