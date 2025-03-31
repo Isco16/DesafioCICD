@@ -7,7 +7,14 @@ describe('API Tests', () => {
         // if (app.close) {
         //     await app.close(); // Close the app if it has a close method
         // }
-        await app.close(); // Close the app if it has a close method
+        console.log("Apagando app...");
+        await app.close(() => {
+            console.log("HTTP server cerrado.");
+
+            // When server has stopped accepting connections  
+            // exit the process with exit status 0 
+            process.exit(0);
+        }); // Close the app if it has a close method
     });
     afterEach(() => {
         // Clear any active timers
