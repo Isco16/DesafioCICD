@@ -6,8 +6,8 @@ describe('API Tests', () => {
         // Example: Close database connections or stop the server if applicable
         // if (app.close) {
         //     await app.close(); // Close the app if it has a close method
+        // }
         await app.close(); // Close the app if it has a close method
-        }
     });
     afterEach(() => {
         // Clear any active timers
