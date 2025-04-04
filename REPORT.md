@@ -89,4 +89,4 @@ Se verifica en Docker Desktop que el contenedor ‘desafio08’ basado en la ima
 
 - Evidencia de la ejecucion exitosas del pipeline.
 
-![Captura pipeline](<assets/reports/desafioCICD #46 Console [Jenkins].pdf>)
+![Captura pipeline](<assets/reports/Reporte_46.pdf>)
