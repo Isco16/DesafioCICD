@@ -6,10 +6,8 @@ WORKDIR /
 
 # Copy package.json and install dependencies
 COPY . .
-RUN npm install
 
-# Copy application code
-COPY . .
+RUN npm install
 
 # Expose port 3000
 EXPOSE 3000
