@@ -18,11 +18,11 @@ Fetching upstream changes from https://github.com/Isco16/DesafioCICD.git
  > git --version # 'git version 2.46.2.windows.1'
  > git.exe fetch --tags --force --progress -- https://github.com/Isco16/DesafioCICD.git +refs/heads/*:refs/remotes/origin/* # timeout=10
  > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
-Checking out Revision de1287223b1f78007f7e40b1f25c3aee4259c3b5 (refs/remotes/origin/main)
+Checking out Revision af5da6811e0aa05981454c1d9aac6f220c014306 (refs/remotes/origin/main)
  > git.exe config core.sparsecheckout # timeout=10
- > git.exe checkout -f de1287223b1f78007f7e40b1f25c3aee4259c3b5 # timeout=10
-Commit message: "Correccion archivo test.."
- > git.exe rev-list --no-walk d80dee60e352c8e53c2a391b5498299a3b8d2f3d # timeout=10
+ > git.exe checkout -f af5da6811e0aa05981454c1d9aac6f220c014306 # timeout=10
+Commit message: "Correccion archivo Jenkinsfile."
+ > git.exe rev-list --no-walk af5da6811e0aa05981454c1d9aac6f220c014306 # timeout=10
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] withEnv
@@ -45,10 +45,10 @@ Fetching upstream changes from https://github.com/Isco16/DesafioCICD.git
  > git --version # 'git version 2.46.2.windows.1'
  > git.exe fetch --tags --force --progress -- https://github.com/Isco16/DesafioCICD.git +refs/heads/*:refs/remotes/origin/* # timeout=10
  > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
-Checking out Revision de1287223b1f78007f7e40b1f25c3aee4259c3b5 (refs/remotes/origin/main)
+Checking out Revision af5da6811e0aa05981454c1d9aac6f220c014306 (refs/remotes/origin/main)
  > git.exe config core.sparsecheckout # timeout=10
- > git.exe checkout -f de1287223b1f78007f7e40b1f25c3aee4259c3b5 # timeout=10
-Commit message: "Correccion archivo test.."
+ > git.exe checkout -f af5da6811e0aa05981454c1d9aac6f220c014306 # timeout=10
+Commit message: "Correccion archivo Jenkinsfile."
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] stage
@@ -95,23 +95,24 @@ C:\Users\Isco\AppData\Local\Jenkins\.jenkins\workspace\desafioCICD>npm test
   console.log
     API is running on port 3000
 
-      at Server.log (app.js:22:32)
+      at Server.log (app.js:25:32)
 
-PASS test/api.test.js
+PASS test/apiRoutes.test.js
   API Tests
-    √ GET /tasks/:id - Obtener una tarea (47 ms)
-    √ GET /tasks - Obtener todas las tareas (5 ms)
+    √ GET /api/tasks/:id - Obtener una tarea (46 ms)
+    √ GET /tasks - Obtener todas las tareas (4 ms)
 
-----------|---------|----------|---------|---------|-------------------
-File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------|---------|----------|---------|---------|-------------------
-All files |   93.75 |       50 |     100 |     100 |                   
- app.js   |   93.75 |       50 |     100 |     100 | 17                
-----------|---------|----------|---------|---------|-------------------
+--------------|---------|----------|---------|---------|-------------------
+File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------|---------|----------|---------|---------|-------------------
+All files     |   95.45 |       50 |     100 |     100 |                   
+ app.js       |     100 |      100 |     100 |     100 |                   
+ appRoutes.js |    92.3 |       50 |     100 |     100 | 16                
+--------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       2 passed, 2 total
 Snapshots:   0 total
-Time:        0.935 s, estimated 1 s
+Time:        0.687 s, estimated 1 s
 Ran all test suites.
 Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
 [Pipeline] }
@@ -130,65 +131,56 @@ C:\Users\Isco\AppData\Local\Jenkins\.jenkins\workspace\desafioCICD>docker build 
 #0 building with "desktop-linux" instance using docker driver
 
 #1 [internal] load build definition from Dockerfile
-#1 transferring dockerfile: 321B done
+#1 transferring dockerfile: 286B done
 #1 DONE 0.0s
 
 #2 [internal] load metadata for docker.io/library/node:18
-#2 ...
+#2 DONE 0.6s
 
-#3 [auth] library/node:pull token for registry-1.docker.io
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
 #3 DONE 0.0s
 
-#2 [internal] load metadata for docker.io/library/node:18
-#2 DONE 1.3s
-
-#4 [internal] load .dockerignore
-#4 transferring context: 2B done
+#4 [1/4] FROM docker.io/library/node:18@sha256:3c56248510700ddb4861bd478ea2ced828793fd5388a21adc5270cdbbf7b7919
 #4 DONE 0.0s
 
-#5 [1/5] FROM docker.io/library/node:18@sha256:3c56248510700ddb4861bd478ea2ced828793fd5388a21adc5270cdbbf7b7919
-#5 DONE 0.0s
+#5 [internal] load build context
+#5 transferring context: 971.06kB 0.7s done
+#5 DONE 0.7s
 
-#6 [internal] load build context
-#6 transferring context: 957.21kB 0.6s done
-#6 DONE 0.6s
+#4 [1/4] FROM docker.io/library/node:18@sha256:3c56248510700ddb4861bd478ea2ced828793fd5388a21adc5270cdbbf7b7919
+#4 CACHED
 
-#5 [1/5] FROM docker.io/library/node:18@sha256:3c56248510700ddb4861bd478ea2ced828793fd5388a21adc5270cdbbf7b7919
-#5 CACHED
+#6 [2/4] COPY . .
+#6 DONE 2.9s
 
-#7 [2/5] COPY . .
-#7 DONE 3.2s
+#7 [3/4] RUN npm install
+#7 3.229 
+#7 3.229 up to date, audited 426 packages in 3s
+#7 3.229 
+#7 3.229 65 packages are looking for funding
+#7 3.229   run `npm fund` for details
+#7 3.230 
+#7 3.230 found 0 vulnerabilities
+#7 3.232 npm notice
+#7 3.232 npm notice New major version of npm available! 10.8.2 -> 11.2.0
+#7 3.232 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.2.0
+#7 3.232 npm notice To update run: npm install -g npm@11.2.0
+#7 3.232 npm notice
+#7 DONE 3.3s
 
-#8 [3/5] RUN npm install
-#8 4.190 
-#8 4.190 up to date, audited 426 packages in 2s
-#8 4.190 
-#8 4.191 65 packages are looking for funding
-#8 4.191   run `npm fund` for details
-#8 4.192 
-#8 4.192 found 0 vulnerabilities
-#8 4.193 npm notice
-#8 4.193 npm notice New major version of npm available! 10.8.2 -> 11.2.0
-#8 4.193 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.2.0
-#8 4.193 npm notice To update run: npm install -g npm@11.2.0
-#8 4.193 npm notice
-#8 DONE 4.3s
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.8s done
+#8 writing image sha256:56f65f5d640ee2898d0212b02a04d033d946df90d421236c01a48c65fcf413c4 done
+#8 naming to docker.io/library/desafio08grupo02 0.0s done
+#8 DONE 0.9s
 
-#9 [4/5] COPY . .
-#9 DONE 1.8s
-
-#10 exporting to image
-#10 exporting layers
-#10 exporting layers 0.7s done
-#10 writing image sha256:a669f0334b0a3eae11ad286d72919e34216140e24e6c3e4ef07cf353d646ba15 done
-#10 naming to docker.io/library/desafio08grupo02 0.0s done
-#10 DONE 0.8s
-
-View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/szjiv6otom2ilmsuaqedvpn58
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ve99pntdqythgrfou5pbiydii
 [Pipeline] bat
 
-C:\Users\Isco\AppData\Local\Jenkins\.jenkins\workspace\desafioCICD>docker run -d -p 3001:3001 desafio08grupo02 
-6fc3a525d3b6db12e8c5203558b7b6eed0ab5e51754118c6004a473cb74b196e
+C:\Users\Isco\AppData\Local\Jenkins\.jenkins\workspace\desafioCICD>docker run -d -p 8083:3000 desafio08grupo02 
+521e163afe1a2a120f63a14c74afcde5411ea0fc8da78df0fb9a18d35be2243c
 [Pipeline] bat
 
 C:\Users\Isco\AppData\Local\Jenkins\.jenkins\workspace\desafioCICD>npm start  
@@ -197,21 +189,3 @@ C:\Users\Isco\AppData\Local\Jenkins\.jenkins\workspace\desafioCICD>npm start
 > node app.js
 
 API is running on port 3000
-Cancelado por admin
-Sending interrupt signal to process
-�Desea terminar el trabajo por lotes (S/N)? 
-script returned exit code 1
-[Pipeline] error
-[Pipeline] }
-[Pipeline] // script
-[Pipeline] }
-[Pipeline] // stage
-[Pipeline] }
-[Pipeline] // withEnv
-[Pipeline] }
-[Pipeline] // withEnv
-[Pipeline] }
-[Pipeline] // node
-[Pipeline] End of Pipeline
-ERROR: ❌ Error en la etapa de Deploy
-Finished: ABORTED

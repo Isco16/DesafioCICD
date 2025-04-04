@@ -51,14 +51,17 @@ Este informe resume los pasos realizados para configurar y ejecutar la canalizac
 Se verifica que la API del proyecto responde en el puerto 3000 con las rutas /tasks y /tasks/:id
 
 ![alt text](assets/images/image-5.png)
+![alt text](assets/images/image-10.png)
 
 3.**Configuración de Jenkins**
 
 - Se crea un archivo Jenkinsfile y se configura un Pipeline que permite a Jenkins clonar el repositorio de GitHub, Buildear el proyecto y hacer el Deploy creando una imagen Docker del proyecto en NodeJS.
 
-![alt text](assets/images/image-6.png)
+![alt text](assets/images/image-13.png)
 
-![alt text](assets/images/image-7.png)
+- (Aplicacion corriendo)
+![alt text](assets/images/image-14.png)
+![alt text](assets/images/image-12.png)
 
 * Se anexa un pdf en el archivo zip el Console Output completo de Jenkins con la ejecución completa. 
 
@@ -86,4 +89,4 @@ Se verifica en Docker Desktop que el contenedor ‘desafio08’ basado en la ima
 
 - Evidencia de la ejecucion exitosas del pipeline.
 
-![Captura pipeline](<assets/reports/Reporte pipeline.pdf>)
+![Captura pipeline](<assets/reports/desafioCICD #46 Console [Jenkins].pdf>)
